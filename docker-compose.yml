@@ -1,0 +1,55 @@
+db: 
+  image: mongo
+  restart: always
+  volumes:
+    - /var/lib/mongodb:/data/db
+  ports:
+    - 27017:27017
+mqtt:
+  image: eclipse-mosquitto
+  restart: always
+  ports:
+    - 1883:1883
+proxy: 
+  image: jwilder/nginx-proxy 
+  ports: 
+    - 80:80
+  restart: always
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+extract-moves:
+  build: extract-moves
+  container_name: extract-moves
+  links:
+    - db:db
+    - mqtt:mqtt
+  environment:
+    - VIRTUAL_HOST=moves-webhook.micahf.com
+  env_file:
+    - .env
+extract-automatic:
+  build: extract-automatic
+  container_name: extract-automatic
+  links:
+    - db:db
+    - mqtt:mqtt
+  environment:
+    - VIRTUAL_HOST=automatic.micahf.com
+  env_file:
+    - .env
+days-to-trackpoints:
+  build: days-to-trackpoints
+  container_name: days-to-trackpoints
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+elevation:"
+  build: elevation
+  container_name: elevation
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env

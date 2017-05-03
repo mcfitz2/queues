@@ -1,0 +1,17 @@
+{
+  "name": "elevation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "elevation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node elevation.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.2.26",
+    "mqtt": "^2.7.1",
+    "elevation": "git+https://github.com/darkskyapp/elevation.git"
+  }
+}

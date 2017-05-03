@@ -1,0 +1,22 @@
+{
+  "name": "extract-moves",
+  "version": "1.0.0",
+  "description": "",
+  "main": "extract_moves.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node extract_moves.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.26",
+    "mqtt": "^2.7.1",
+    "request": "^2.81.0",
+    "moves": "git+https://github.com/mcfitz2/node-moves.git"
+  }
+}

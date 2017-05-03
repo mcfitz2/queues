@@ -1,0 +1,17 @@
+{
+  "name": "days-to-trackpoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "days_to_trackpoints.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node days_to_trackpoints.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.0",
+    "mongodb": "^2.2.26",
+    "mqtt": "^2.7.1"
+  }
+}
