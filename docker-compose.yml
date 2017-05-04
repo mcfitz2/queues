@@ -45,9 +45,39 @@ days-to-trackpoints:
     - mqtt:mqtt
   env_file:
     - .env
-elevation:"
+elevation:
   build: elevation
   container_name: elevation
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+oauth:
+  build: oauth
+  container_name: oauth
+  links:
+    - db:db
+  env_file:
+    - .env
+  environment:
+    - MONGO_URL=mongodb://db/dw
+    - PORT=8000
+    - VIRTUAL_HOST=oauth.micahf.com,authority-figure.micahf.com
+
+extract-instagram:
+  build: extract-instagram
+  container_name: extract-instagram
+  links:
+    - db:db
+  env_file:
+    - .env
+  environment:
+    - VIRTUAL_HOST=instagram-webhook.micahf.com
+    
+places:
+  build: places
+  container_name: places
   links:
     - db:db
     - mqtt:mqtt
