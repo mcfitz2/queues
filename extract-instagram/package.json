@@ -1,0 +1,19 @@
+{
+  "name": "extract-instagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "extract_instagram.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node extract_instagram.js"
+  },
+  "author": "Micah Fitzgerald",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "instagram-node": "^0.5.8",
+    "mongodb": "^2.2.26",
+    "mqtt": "^2.7.1"
+  }
+}
