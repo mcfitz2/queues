@@ -1,0 +1,17 @@
+{
+    "name": "inhabited",
+    "version": "1.0.0",
+    "description": "",
+    "main": "inhabited.js",
+    "scripts": {
+        "start": "node  inhabited.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "inhabited": "git+https://github.com/darkskyapp/inhabited.git",
+        "mongodb": "^2.2.26",
+        "mqtt": "^2.7.1"
+    }
+}

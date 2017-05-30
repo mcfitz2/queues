@@ -1,0 +1,17 @@
+{
+    "name": "timezone",
+    "version": "1.0.0",
+    "description": "",
+    "main": "timezone.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node timezone.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mongodb": "^2.2.26",
+        "mqtt": "^2.7.1",
+        "tz-lookup": "^6.1.0"
+    }
+}
