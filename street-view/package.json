@@ -1,0 +1,17 @@
+{
+    "name": "street-view",
+    "version": "1.0.0",
+    "description": "",
+    "main": "streetview.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node streetview.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mongodb": "^2.2.26",
+        "mqtt": "^2.7.1",
+        "streetview": "0.0.3"
+    }
+}

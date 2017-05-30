@@ -1,0 +1,17 @@
+{
+    "name": "vehicles",
+    "version": "1.0.0",
+    "description": "",
+    "main": "vehicles.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node vehicles.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mongodb": "^2.2.26",
+        "mqtt": "^2.7.1",
+        "automatic": "git+https://github.com/mcfitz2/node-automatic.git"
+    }
+}
