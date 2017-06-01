@@ -53,9 +53,9 @@ elevation:
     - mqtt:mqtt
   env_file:
     - .env
-oauth:
-  build: oauth
-  container_name: oauth
+auth:
+  build: auth
+  container_name: auth
   links:
     - db:db
   env_file:
@@ -70,14 +70,101 @@ extract-instagram:
   container_name: extract-instagram
   links:
     - db:db
+    - mqtt:mqtt
   env_file:
-    - .env
-  environment:
-    - VIRTUAL_HOST=instagram-webhook.micahf.com
-    
+    - .env  
 places:
   build: places
   container_name: places
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+bearing:
+  build: bearing
+  container_name: bearing
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+inhabited:
+  build: inhabited
+  container_name: inhabited
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+timezone:
+  build: timezone
+  container_name: timezone
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+adp:
+  build: adp
+  container_name: adp
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+adp_w2:
+  build: adp_w2
+  container_name: adp_w2
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+
+geocode:
+  build: geocode
+  container_name: geocode
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+vehicles:
+  build: vehicles
+  container_name: vehicles
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+weather:
+  build: weather
+  container_name: weather
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+
+extract-twitter:
+  build: extract-twitter
+  container_name: extract-twitter
+  links:
+    - db:db
+    - mqtt:mqtt
+  env_file:
+    - .env
+street-view:
+  build: street-view
+  container_name: street-view
   links:
     - db:db
     - mqtt:mqtt
